@@ -1,5 +1,9 @@
 # Easy-math.js
 
+[![Build Status](https://travis-ci.com/kingzez/easy-math.js.svg?branch=master)](https://travis-ci.com/kingzez/easy-math.js)
+[![npm](https://img.shields.io/npm/v/easy-math.js.svg)](https://www.npmjs.com/package/easy-math.js)
+[![NpmLicense](https://img.shields.io/npm/l/easy-math.js.svg)](https://www.npmjs.com/package/easy-math.js)
+
 easy-math.js include addition multiplication subtraction division with typescript
 
 ## Usage
