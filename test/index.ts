@@ -21,7 +21,7 @@ test('subtract', (t) => {
 
 test('divide', (t) => {
     const result = divide(0.3, 0.1)
-    console.log(`0.3 - 0.1 = ${result}`)
+    console.log(`0.3 / 0.1 = ${result}`)
     t.is(result, 3)
 })
 
