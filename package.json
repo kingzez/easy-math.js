@@ -1,0 +1,39 @@
+{
+  "name": "easy-math.js",
+  "version": "1.0.0",
+  "description": "easy math, simple math, include addition multiplication subtraction division",
+  "main": "./dist/src/index.js",
+  "scripts": {
+    "dev": "./node_modules/.bin/nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "watch": "tsc -w",
+    "test": "./node_modules/.bin/ava dist/test --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/kingzez/easy-math.git"
+  },
+  "keywords": [
+    "math",
+    "Mathematical",
+    "addition",
+    "multiplication",
+    "subtraction",
+    "division",
+    "add",
+    "sub",
+    "mul",
+    "div"
+  ],
+  "author": "kingzez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kingzez/easy-math/issues"
+  },
+  "homepage": "https://github.com/kingzez/easy-math#readme",
+  "devDependencies": {
+    "ava": "1.0.0-beta.8",
+    "nodemon": "^1.18.4",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.3"
+  }
+}
