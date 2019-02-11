@@ -1,6 +1,6 @@
 {
   "name": "easy-math.js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "easy math, simple math, include addition multiplication subtraction division",
   "main": "./dist/src/index.js",
   "scripts": {
