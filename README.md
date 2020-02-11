@@ -32,8 +32,6 @@ And you can use ES6 import
 const { add } from 'easy-math.js'
 
 add(0.1, 0.2) // 0.3
-//or
-0.1.add(0.2) // 0.3
 ```
 
 ### Methods
