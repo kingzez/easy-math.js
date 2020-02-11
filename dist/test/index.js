@@ -22,22 +22,6 @@ ava_1.default('subtract', (t) => {
 });
 ava_1.default('divide', (t) => {
     const result = src_1.divide(0.3, 0.1);
-    console.log(`0.3 - 0.1 = ${result}`);
-    t.is(result, 3);
-});
-ava_1.default('num.add', (t) => {
-    const result = 0.1.add(0.2);
-    t.is(result, 0.3);
-});
-ava_1.default('num.mul', (t) => {
-    const result = 0.3.mul(0.75);
-    t.is(result, 0.225);
-});
-ava_1.default('num.sub', (t) => {
-    const result = 1.5.sub(1.2);
-    t.is(result, 0.3);
-});
-ava_1.default('num.div', (t) => {
-    const result = 0.3.div(0.1);
+    console.log(`0.3 / 0.1 = ${result}`);
     t.is(result, 3);
 });

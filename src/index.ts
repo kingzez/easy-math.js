@@ -1,5 +1,7 @@
+import { decimalLen, exponent, typeError } from "./util";
 /**
- * Mathematical addition
+ * addition
+ * 加法
  * @param n1
  * @param n2
  *
@@ -7,15 +9,15 @@
  *  add(0.1, 0.2) // 0.3
  */
 export function add(n1: number, n2: number): number {
-    typeError(n1, n2)
-    const [n1DecLen, n2DecLen] = [decimalLen(n1), decimalLen(n2)]
-    const base = exponent(n1DecLen, n2DecLen)
-    return (n1* base + n2 * base)  / base
+    typeError(n1, n2);
+    const [n1DecLen, n2DecLen] = [decimalLen(n1), decimalLen(n2)];
+    const base = exponent(n1DecLen, n2DecLen);
+    return (n1 * base + n2 * base) / base;
 }
 
-
 /**
- * Mathematical multiplication
+ * multiplication
+ * 乘法
  * @param n1
  * @param n2
  *
@@ -23,15 +25,15 @@ export function add(n1: number, n2: number): number {
  * multiply(0.3, 0.75) // 0.225
  */
 export function multiply(n1: number, n2: number): number {
-    typeError(n1, n2)
-    const [n1DecLen, n2DecLen] = [decimalLen(n1), decimalLen(n2)]
-    const base = exponent(n1DecLen, n2DecLen, 2)
-    return (n1 * n2 * base) / base
+    typeError(n1, n2);
+    const [n1DecLen, n2DecLen] = [decimalLen(n1), decimalLen(n2)];
+    const base = exponent(n1DecLen, n2DecLen, 2);
+    return (n1 * n2 * base) / base;
 }
 
-
 /**
- * Mathematical subtraction
+ * subtraction
+ * 减法
  * @param n1
  * @param n2
  *
@@ -39,15 +41,15 @@ export function multiply(n1: number, n2: number): number {
  * subtract() //
  */
 export function subtract(n1: number, n2: number): number {
-    typeError(n1, n2)
-    const [n1DecLen, n2DecLen] = [decimalLen(n1), decimalLen(n2)]
-    const base = exponent(n1DecLen, n2DecLen)
-    return (n1* base - n2 * base)  / base
+    typeError(n1, n2);
+    const [n1DecLen, n2DecLen] = [decimalLen(n1), decimalLen(n2)];
+    const base = exponent(n1DecLen, n2DecLen);
+    return (n1 * base - n2 * base) / base;
 }
 
-
 /**
- * Mathematical division
+ * division
+ * 除法
  * @param n1
  * @param n2
  *
@@ -55,84 +57,16 @@ export function subtract(n1: number, n2: number): number {
  * divide() //
  */
 export function divide(n1: number, n2: number): number {
-    typeError(n1, n2)
-    const [n1DecLen, n2DecLen] = [decimalLen(n1), decimalLen(n2)]
-    const r1 = Number(n1.toString().replace(".", ""))
-    const r2 = Number(n2.toString().replace(".", ""))
+    typeError(n1, n2);
+    const [n1DecLen, n2DecLen] = [decimalLen(n1), decimalLen(n2)];
+    const r1 = Number(n1.toString().replace(".", ""));
+    const r2 = Number(n2.toString().replace(".", ""));
     return (r1 / r2) * Math.pow(10, n2DecLen - n1DecLen);
-}
-
-/**
- * decimals
- * @param n
- *
- * Usage:
- *  decimalLen(1) // 0
- *  decimalLen(0.1) // 1
- *  decimalLen(0.75) // 2
- */
-function decimalLen(n: number): number {
-    return (n.toString().split('.')[1] || '').length
-}
-
-
-/**
- * The n power of 10 of the largest number in two numbers n1 n2.
- * @param n1
- * @param n2
- * @param n
- *
- * Usage:
- *  exponent(1, 2, 1) // 2
- *  exponent(1, 2, 2) // 4
- */
-function exponent(n1: number, n2: number, n: number = 1): number {
-    return Math.pow(10, Math.pow(Math.max(n1, n2), n))
-}
-
-
-function isNumber(n: number): boolean {
-    return ({}).toString.call(n) === '[object Number]'
-}
-
-
-function typeError(n1: any, n2: any): void {
-    if (!isNumber(n1) || !isNumber(n2)) {
-        throw new Error("EasyMath Error: parameter of type Expected<number>")
-    }
-}
-
-declare global {
-    interface Number {
-        add(n: number): number;
-        div(n: number): number;
-        mul(n: number): number;
-        sub(n: number): number;
-    }
-}
-
-Number.prototype.add = function(n: number): number {
-    return add(n, this)
-}
-
-Number.prototype.sub = function(n: number): number {
-    return subtract(this, n)
-}
-
-Number.prototype.mul = function(n: number): number {
-    return multiply(this, n)
-}
-
-Number.prototype.div = function(n: number): number {
-    return divide(this, n)
 }
 
 export default {
     add,
     multiply,
     subtract,
-    divide,
-}
-
-
-
+    divide
+};
