@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "./node_modules/.bin/nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
     "watch": "tsc -w",
-    "test": "./node_modules/.bin/ava dist/test --verbose"
+    "test": "./node_modules/.bin/ava dist/test/index.js --verbose"
   },
   "repository": {
     "type": "git",
