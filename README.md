@@ -29,7 +29,7 @@ emjs.add(0.1, 0.2) // 0.3
 And you can use ES6 import
 
 ```js
-const { add } from 'easy-math.js'
+import { add } from 'easy-math.js'
 
 add(0.1, 0.2) // 0.3
 ```
