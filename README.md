@@ -1,10 +1,21 @@
-# Easy-math.js
-
-[![Build Status](https://travis-ci.com/kingzez/easy-math.js.svg?branch=master)](https://travis-ci.com/kingzez/easy-math.js)
-[![npm](https://img.shields.io/npm/v/easy-math.js.svg)](https://www.npmjs.com/package/easy-math.js)
-[![NpmLicense](https://img.shields.io/npm/l/easy-math.js.svg)](https://www.npmjs.com/package/easy-math.js)
-
-easy-math.js include addition multiplication subtraction division with typescript
+<div align="center">
+  <h1 style="text-align: center">easy-math.js</h1>
+	<div>
+		<img width="500" src="https://user-images.githubusercontent.com/10891613/82399383-9a682380-9a87-11ea-8fba-a2d21a8356ac.png" alt="Awesome Node.js">
+	</div>
+	<hr>
+	<a href="https://travis-ci.com/kingzez/easy-math.js">
+		<img src="https://travis-ci.com/kingzez/easy-math.js.svg?branch=master" alt="build">
+	</a>
+	<a href="https://www.npmjs.com/package/easy-math.js">
+		<img src="https://img.shields.io/npm/v/easy-math.js.svg" alt="npm">
+	</a>
+	<a href="https://www.npmjs.com/package/easy-math.js">
+		<img src="https://img.shields.io/npm/l/easy-math.js.svg" alt="license">
+	</a>
+	<br>
+  <p>easy-math.js include addition multiplication subtraction division with typescript.</p>
+</div>
 
 ## Usage
 
