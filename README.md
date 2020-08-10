@@ -13,6 +13,9 @@
 	<a href="https://www.npmjs.com/package/easy-math.js">
 		<img src="https://img.shields.io/npm/l/easy-math.js.svg" alt="license">
 	</a>
+	<a href="https://www.npmjs.com/package/easy-math.js">
+		<img src="https://flat.badgen.net/npm/dt/easy-math.js" alt="download">
+	</a>
 	<br>
   <p>easy-math.js include addition multiplication subtraction division with typescript.</p>
 </div>
